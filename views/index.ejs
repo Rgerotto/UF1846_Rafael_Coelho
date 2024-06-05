@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Rabbit Inc</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('templates/header') %>
+  <main>
+    <h2>Nuestro equipo</h2>
+    <section>
+      <% results.forEach(result => { %>
+        <a href="/team/<%= result.apellido %>">
+        <div class="card <%= result.departamento %>">
+          <img src="/img_customers/<%= result.nombre %>.<%= result.apellido %>.png" alt="<%= result.nombre %>">
+          <h3><%= result.nombre %></h3>
+          <p><%= result.email %></p>
+          <hr>
+          <p><%= result.departamento %></p>
+        </div>
+      </a>
+        <% }); %>
+    </section>
+
+  
+</main>
+</body>
+</html>
