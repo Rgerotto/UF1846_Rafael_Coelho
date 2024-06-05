@@ -13,7 +13,7 @@ app.use(express.static('public'));
 app.use(router);
 
 app.use((req, res) => {
-    res.status(404).render('erorr')
+    res.status(404).render('error')
 });
 
 app.listen(PORT, ()=> {
